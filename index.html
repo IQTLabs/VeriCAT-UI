@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+		<title>VeriCAT: Translation Quality Estimation </title>
+	</head>
+	<body >
+
+	
+  <div class="ui sidebar inverted vertical menu" style="background-color: white">
+  	<a class="item">
+      <div class="ui selection dropdown">
+  			<input type="hidden" name="gender" value="1">
+			<i class="dropdown icon" ></i>
+			<div class="default text"></div>
+  			<div class="menu">
+			    <div class="item" data-value="1">News Examples</div>
+			    <div class="item" data-value="2">Turnip Examples</div>
+			    <div class="item" data-value="3">Joke Examples</div>
+			    <div class="item" data-value="4">Putin Examples</div>
+			    
+	  		</div>
+		</div>
+    </a>
+    <a class="item">
+      <div class="ui toggle checkbox small" style="margin-left: 15px;margin-bottom: 15px;margin-top: 15px;">
+	  				<input type="checkbox" onclick="flipSwitched()" checked=True id="godToggle">
+	  				<label>God Mode</label>
+				</div>
+    </a>
+
+    <a class="item">
+    	<div class="ui toggle checkbox small" style="margin-left: 15px;margin-bottom: 15px;margin-top: 15px;">
+	  				<input type="checkbox" onclick="setup()" checked=True id="namedToggle">
+	  				<label>Named Entities</label>
+				</div>
+    </a>
+    <a class="item">
+    	<div class="ui toggle checkbox small" style="margin-left: 15px;margin-bottom: 15px;margin-top: 15px;">
+	  				<input type="checkbox" onclick="setup()" checked=True id="polyToggle">
+	  				<label>Polysemy</label>
+				</div>
+    </a>
+    <a class="item">
+    	<div class="ui toggle checkbox small" style="margin-left: 15px;margin-bottom: 15px;margin-top: 15px;">
+	  				<input type="checkbox" onclick="setup()" checked=True id="homoToggle">
+	  				<label>Homonym</label>
+				</div>
+    </a>
+    <a class="item">
+    	<div class="ui toggle checkbox small" style="margin-left: 15px;margin-bottom: 15px;margin-top: 15px;">
+	  				<input type="checkbox" onclick="setup()" checked=True id="corrToggle">
+	  				<label>Corrections</label>
+				</div>
+    </a>
+
+    <a class="item">
+    	<div class="ui toggle checkbox small" style="margin-left: 15px;margin-bottom: 15px;margin-top: 15px;">
+	  				<input type="checkbox" onclick="setup()" checked=True id="colorToggle">
+	  				<label>Colors</label>
+				</div>
+    </a>
+    <a class="item">
+    	<div class="ui toggle checkbox small" style="margin-left: 15px;margin-bottom: 15px;margin-top: 15px;">
+	  				<input type="checkbox" onclick="setup()" checked=True id="boldingToggle">
+	  				<label>Bolding</label>
+				</div>
+    </a>
+    <a class="item">
+    	<div class="ui toggle checkbox small" style="margin-left: 15px;margin-bottom: 15px;margin-top: 15px;">
+	  				<input type="checkbox" onclick="setup()" checked=True id="highlightToggle">
+	  				<label>Highlighting</label>
+				</div>
+    </a>
+      
+
+
+    </a>
+  </div>
+  <div class="pusher" style="background-color: white">
+  
+  		<button class="ui icon button" style="text-align: center; margin: 20px;"><i class="bars icon"></i></button>
+
+		
+
+		<div class="ui equal width grid container">
+			<div class="row">
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </div>
+				<div class="four wide column">
+					<div class="ui segment borderless" >Original Text </div>
+				</div>
+				<div class="four wide column">
+					<div class="ui segment borderless trans_column" >Machine Translated Text </div>
+				</div>
+				<div class="four wide column godMode">
+					<div class="ui segment borderless " >Hand-corrected Text </div>
+				</div>
+				<div class="three wide column tools">
+					<div class="sample-container">
+						<div class="ui segment borderless" data-html="<span style='color:#E03997'>Direct assessment: <br> Human evaluation of MT fidelity to correct translation.</span> <br><br><span style='color:teal'>Translation edit: <br>Percentage of text that does not require post-editing. Calculated as a function of substitutions, insertions, deletions, and shifts per sentence.</span>" data-position="bottom center" > Quality Score</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+    	<div id="show-data"></div>
+
+    	<div class="ui equal width grid container" style="padding-top: 50px; font-size: 10px;">
+    		<div class="ui message">
+    			<div class="header">
+    				Error Types
+			  	</div>
+
+				<div class="ui list">
+		    		<div class="item" style="text-decoration:underline dashed; -webkit-text-decoration:underline dashed;">Named Entity </div>
+		    		<div class="item" style="text-decoration:underline dotted; -webkit-text-decoration:underline dotted;">Polysemy </div>
+		    		<div class="item" style="text-decoration:underline double; -webkit-text-decoration:underline double;">Homonym </div>
+				</div>
+			</div>
+		</div>
+
+
+</div>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/semantic.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lettering.min.js"></script>
+		<script src="js/load_data.js"></script>
+			
+
+	</body>
+</html>
